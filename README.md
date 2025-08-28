@@ -1,4 +1,4 @@
-# CustomerStorageApp
+# ABC Retailer Web App - Part 1
 
 An **ASP.NET Core MVC application** that demonstrates how to use **Azure Storage services**:
 - **Blob Storage** – Store and retrieve images/files.
