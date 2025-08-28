@@ -8,33 +8,6 @@ An **ASP.NET Core MVC application** that demonstrates how to use **Azure Storage
 
 ---
 
-## 📂 Project Structure
-
-```
-
-CustomerStorageApp/
-│
-├── Controllers/
-│   ├── BlobsController.cs     # Manages Blob Storage (upload, list, download, delete)
-│   ├── FilesController.cs     # Manages File Share Storage
-│   ├── QueuesController.cs    # Manages Queue Storage (enqueue/dequeue messages)
-│   ├── TablesController.cs    # Manages Table Storage (CRUD operations)
-│
-├── Models/
-│   ├── CustomerProfile.cs     # Example entity for Table Storage
-│   ├── AuditLog.cs            # Example model for queue messages
-│
-├── Views/                     # Razor Views for UI
-│
-├── wwwroot/                   # Static files (CSS, JS, images)
-│
-├── appsettings.json           # Azure Storage connection string + config
-├── Program.cs                 # App startup / dependency injection
-
-````
-
----
-
 ## 🚀 Getting Started
 
 ### 1. Prerequisites
@@ -97,32 +70,5 @@ Navigate to `https://localhost:5001` (or as shown in console).
 * Uses `ITableEntity` for schema-flexible storage
   
 *Later Some table rows could contain association to multimedia that is stored in the blob*
-
----
-
-## 🛡️ Error Handling & Logging
-
-* Each controller includes **try/catch** blocks to handle Azure errors gracefully.
-* Logs errors to the console (can extend to Application Insights or Blob logging).
-
----
-
-## 📘 Notes
-
-* **Queue Storage** supports different message types. You can encode messages as JSON for flexibility.
-* **Table Storage** entities must define `PartitionKey` and `RowKey`.
-* **Blob/File Share names** must follow Azure naming rules.
-
----
-
-## 🤝 Contribution
-
-Feel free to fork, modify, and extend this project. Some ideas:
-
-* Add authentication (Azure AD)
-* Store metadata in Tables for Blobs
-* Trigger Azure Functions from Queue messages
-
----
 
 
